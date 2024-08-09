@@ -1,0 +1,96 @@
+body{
+    margin-left: 10vh;
+    background-color: #0C1839;
+}
+
+h1{
+    font-weight: 200;
+    font-size: 40px;
+}
+
+h2{
+    color: white;
+    font-weight: 500;
+    font-size: 80px;}
+
+h2>span{
+    font-weight: bold;
+    line-height: 10px;
+    color: wheat;
+}
+
+p{
+    color: white;
+    font-size: 27px;
+}
+
+button{
+    background-color: #2196F3;
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    transition: background-color 0.5s ease;
+}
+button:hover{
+    background-color: #111185;
+}
+
+.title{
+    line-height: 60px;
+}
+
+.home{/*A parte principal*/
+    display: flex;
+    flex-direction: column; 
+    width: 20%;
+}
+
+.sobre{ /* Lorepsum */
+    margin-top: 50px;
+    text-align:center ;
+}   
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteiners{
+    margin: 10vh 10vh 15px 0vh;
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    background-color:  #132456;
+}
+
+.conteiner-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 80vh;
+    background-image: url(../source/img/airpods.png);
+    background-size: 160vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.conteiner-2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+    height: 80vh;
+    background-image: url(../source/img/airpodsmax.png);
+    background-size: 91vh;
+    background-repeat: no-repeat;
+}

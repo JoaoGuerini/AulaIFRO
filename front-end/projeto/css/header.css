@@ -1,0 +1,22 @@
+img{
+    width: 8vh;
+    min-width: 1vh;
+}
+
+header{
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: wheat;
+
+}
+
+li{
+    display: inline-block;
+    margin: 2vh;
+    font-size: 20px;
+    text-decoration: none;
+    color: wheat;
+}
