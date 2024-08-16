@@ -1,9 +1,10 @@
 img{
-    width: 8vh;
+    width: 15vh;
     min-width: 1vh;
 }
 
 header{
+    
     margin: 20px 0px;
     display: flex;
     flex-direction: row;
@@ -13,10 +14,27 @@ header{
 
 }
 
+a{
+    font-size: 23px;
+    text-decoration: none;
+    color: white;
+}
+
+
 li{
     display: inline-block;
+    padding: 22px;
     margin: 2vh;
-    font-size: 20px;
-    text-decoration: none;
-    color: wheat;
+    transition: background-color 0.5s ease;
+
 }
+
+li:hover{
+    background-color: #0072ff;
+}
+
+
+ul{
+    margin-right: 22vh;
+}
+

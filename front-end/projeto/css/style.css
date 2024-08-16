@@ -25,9 +25,9 @@ p{
 }
 
 button{
-    background-color: #2196F3;
-    border: none;
-    color: #fff;
+    background-color: #ffffff;
+    border: solid wheat;
+    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -35,12 +35,12 @@ button{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 18px;
 
     transition: background-color 0.5s ease;
 }
 button:hover{
-    background-color: #111185;
+    border-color: #0072ff;
 }
 
 .title{
@@ -94,3 +94,4 @@ main{
     background-size: 91vh;
     background-repeat: no-repeat;
 }
+
