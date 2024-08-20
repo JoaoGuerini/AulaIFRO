@@ -1,0 +1,60 @@
+body{
+    margin-left: 10vh;
+    background-color: #0C1839;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    color: white;
+    font-weight: 500;
+    font-size: 80px;
+}
+
+h2>span{
+    font-weight: bold;
+    line-height: 10px;
+    color: wheat;
+}
+
+.title{
+    line-height: 60px;
+}
+
+.home{/*A parte principal*/
+    display: flex;
+    flex-direction: column; 
+    width: 27%;
+}
+
+.sobre{ /* Lorepsum */
+    margin-top: 50px;
+    text-align:center ;
+}   
+
+.conteiners{
+    margin: 00vh 0vh 0px 0vh;
+    width: 60%;
+    height: 80%;
+    border-radius: 20px;
+    background-color:  #132456;
+}
+
+.conteiner-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 80vh;
+    background-image: url(../source/img/airpods.png);
+    background-size: 140vh;
+    background-position:top;
+    background-repeat: no-repeat;
+}
+
+.conteiner-2 {
+    background-color: white;
+}
