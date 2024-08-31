@@ -17,11 +17,11 @@ h2{
 h2>span{
     font-weight: bold;
     line-height: 10px;
-    color: wheat;
+    color: #39ff14;
 }
 
 p{
-    color: white;
+    color: #39ff14;
     font-size: 27px;
 }
 
@@ -45,8 +45,8 @@ main{
 }
 
 .adquirir:hover{
-    background-color: #0072ff;
-    color: white;
+    background-color: #39ff14;
+
 }
 
 .title{
@@ -95,4 +95,58 @@ main{
     background-repeat: no-repeat;
 }
 
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 6vh;
+    }
+
+    p {
+        font-size: 2.2vh;
+    }
+
+    .adquirir {
+        font-size: 1.8vh;
+    }
+
+    .home{
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .title{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conteiner-1,
+    .conteiner-2,
+    .conteiners{
+        align-items: center;
+        justify-content: center;
+        background-size: 95vh;
+        height: 100vh; /* Reduz altura para telas menores */
+        width: 100vh;
+    }
+
+    .conteiner-2{
+        margin-left: 2vh;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .conteiner-2{
+        align-items: center;
+        justify-content: center;
+        background-size: 95vh;
+        height: 100vh; /* Reduz altura para telas menores */
+        width: 100vh;
+    }
+
+    .conteiner-2{
+        margin-left: 2vh;
+    }
+    
+
+}
 

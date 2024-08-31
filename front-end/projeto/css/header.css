@@ -38,3 +38,11 @@ ul{
     margin-right: 22vh;
 }
 
+@media screen and (max-width: 1020px){
+    header{
+        display: none;
+    }
+    body{
+        margin: 0;
+    }
+}
