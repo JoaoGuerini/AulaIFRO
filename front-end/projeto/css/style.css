@@ -1,152 +1,130 @@
 body{
-    margin-left: 10vh;
+    margin-left: 15vh;
+    margin-bottom: 15vh;
     background-color: #0C1839;
-}
-
-h1{
-    font-weight: 200;
-    font-size: 40px;
-}
-
-h2{
-    color: white;
-    font-weight: 500;
-    font-size: 80px;
-}
-
-h2>span{
-    font-weight: bold;
-    line-height: 10px;
-    color: #39ff14;
-}
-
-p{
-    color: #39ff14;
-    font-size: 27px;
 }
 
 main{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20vh;
 }
 
-.adquirir{
-    margin-top: 6vh;
-    background-color: #ffffff;
-    color: black;
-    padding: 12px 12px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.5s ease, color 0.5s ease;
+section {
+    display: flex;      
+    width: 90%;
+    min-height: 90%;
+    background-color: #132456;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.adquirir:hover{
-    background-color: #39ff14;
-
+strong{
+    color: #0072ff;
 }
 
-.title{
-    line-height: 60px;
-}
-
-.home{/*A parte principal*/
+.div-img{
     display: flex;
-    flex-direction: column; 
-    width: 27%;
-}
-
-.sobre{ /* Lorepsum */
-    margin-top: 50px;
-    text-align:center ;
-}   
-
-.conteiners{
-    margin: 10vh 10vh 15px 10vh;
-    width: 80%;
-    height: 80%;
-    border-radius: 20px;
-    background-color:  #132456;
-}
-
-.conteiner-1 {
-    display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    width: 95%;
-    height: 80vh;
-    background-image: url(../source/img/airpods.png);
-    background-size: 180vh;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.conteiner-2{
-    display: flex;
     align-items: center;
-    justify-content: flex-end;
-    width: 80%;
-    height: 80vh;
-    background-image: url(../source/img/airpodsmax.png);
-    background-size: 91vh;
-    background-repeat: no-repeat;
+    margin-bottom: auto;
+    color: white;
+    width: 70%;
+    gap: 15vh;
 }
 
-
-@media screen and (max-width: 768px) {
-    h2 {
-        font-size: 6vh;
-    }
-
-    p {
-        font-size: 2.2vh;
-    }
-
-    .adquirir {
-        font-size: 1.8vh;
-    }
-
-    .home{
-        display: flex;
-        flex-direction: column; 
-    }
-
-    .title{
-        align-items: center;
-        justify-content: center;
-    }
-
-    .conteiner-1,
-    .conteiner-2,
-    .conteiners{
-        align-items: center;
-        justify-content: center;
-        background-size: 95vh;
-        height: 100vh; /* Reduz altura para telas menores */
-        width: 100vh;
-    }
-
-    .conteiner-2{
-        margin-left: 2vh;
-    }
+.div-content{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    font-size: 32px;
 }
 
-@media screen and (max-width: 1500px) {
-    .conteiner-2{
-        align-items: center;
-        justify-content: center;
-        background-size: 95vh;
-        height: 100vh; /* Reduz altura para telas menores */
-        width: 100vh;
+.div-img > h2{
+    font-size: 60px;
+}
+
+.button-go{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0C1839;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: solid #132456 ;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%; 
+    margin-top: 5vh; 
+    text-decoration: none; 
+    transition: background-color 0.7s ease;
+}
+
+.button-go:hover{
+    background-color: #0072ff;
+
+}
+
+#waterpods {
+    width: 90vh;
+}
+
+#watermax{
+    width: 60vh;
+}
+
+@media screen and (max-width: 1020px){
+
+    body{
+        margin: 10vh;
     }
 
-    .conteiner-2{
-        margin-left: 2vh;
+    section{
+        width: 100%;
+        flex-direction: column;
+        padding: 2vh; 
+    }
+
+    .div-img{
+        align-items: center;
+        justify-content: center;
+        margin: 8vh; 
+    }
+
+    .div-img > h2 {
+        margin: 0; 
+        font-size: 30px;
+        text-align: center; 
+    }
+
+    .div-content{
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto; 
+        padding: 0 5vh; 
+        text-align: center; 
+    }
+
+    .div-content > p {
+        width: 50vh;
+        text-align: start;
     }
     
+    #waterpods {
+        width: 70vh;
+    }
+
+    #watermax{
+        width: 50vh;
+    }
 
 }
-

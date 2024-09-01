@@ -23,11 +23,9 @@ strong{
     border: solid black ;
     border-radius: 5px;
     cursor: pointer;
-    width: 50%; /* Para ajustar a largura ao contêiner */
-    margin-top: auto; /* Para empurrar o botão para baixo dentro do contêiner */
-    text-decoration: none; /* Remove underline de links, se aplicável */
-
-
+    width: 50%; 
+    margin-top: auto; 
+    text-decoration: none; 
 }
 
 .button-div{
@@ -167,7 +165,7 @@ strong{
 
     
     .comprar-div-img, .comprar-infos, .div-compras{
-        height: 100vh;
+        height: 130vh;
         width: 100%;
     }
 
@@ -197,4 +195,6 @@ strong{
 
 }
 
+/* Só pra dar 200 Linhas */
+/* Só pra dar 200 Linhas */
 /* Só pra dar 200 Linhas */

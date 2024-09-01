@@ -10,52 +10,60 @@
 </head>
 <body>
     <header>
-        <div class="title">
-            <img src="source/img/Design sem nome.png" alt="">
+        <div class="nav-list">
+            <div id="img-logo">
+                <img src="source/img/Design sem nome.png" alt="">
+            </div>
+            <nav>
+                <ul class="ul-resp">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><img src="source/img/menu_white_36dp.svg"> </button>
+                </div>
+            </nav>
         </div>
-        <nav>
+
+        <div class="mobile-menu">
             <ul>
-                <li><a href="">Início</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Contato</a></li>
+                <li class="nav-item"><a href="index.html">Início</a></li>
+                <li class="nav-item"><a href="contato.html">Contato</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <section class="conteiners">
-            <div class="conteiner-1">
-                <div class="home">
-                    <div class="title">
-                        <h2>WatterPods</h2>
-                        <h2><span>Pro</span></h2>
-                    </div>
-                    <div class="sobre">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique reprehenderit deleniti unde, minus voluptate id libero fuga ipsam, sit saepe inventore minima nesciunt hic soluta aut officiis. Totam, saepe eos.</p>
-                        <a href="buyAirpods.html" class="adquirir">Adquirir</a>
-                    </div>
-                </div>
+        <section>
+            <div class="div-img">
+                <img src="source/img/airpods.png" alt="waterpods" id="waterpods">
+                <h2>WaterPods <strong>Pro</strong></h2>
             </div>
+
+            <div class="div-content">
+                <p>Os WaterPods Pro são fones de ouvido revolucionários, à prova d'água e com cancelamento de ruído avançado. Perfeitos para quem busca qualidade sonora imersiva em qualquer ambiente. Com design ergonômico, bateria de longa duração e conectividade rápida, eles elevam sua experiência musical a outro nível.</p>
+                <a href="buyAirpods.html" class="button-go"> Adquirir </a>
+            </div>
+
         </section>
 
-        <section class="conteiners">
-            <div class="conteiner-2">
-                <div class="home">
-                    <div class="title">
-                        <h2>WaterPods</h2>
-                        <h2><span>Max</span></h2>
-                    </div>
-                    
-                    <div class="sobre">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos tempore, harum ratione, beatae blanditiis eius dignissimos placeat maiores hic inventore adipisci ducimus illo. Deserunt voluptate doloremque, consequuntur ullam quas qui?</p>
-                        <a href="buyAirmax.html" class="adquirir">Adquirir</a>
-                    </div>
-                </div>
+        <section>
+            <div class="div-img">
+                <img src="source/img/airpodsmax.png" alt="watermax" id="watermax">
+                <h2>WaterPods <strong>Max</strong></h2>
+            </div>
+
+            <div class="div-content">
+                <p>O WaterPods Max oferece áudio imersivo de alta definição com tecnologia de cancelamento de ruído líder no mercado. Seu design elegante e confortável é perfeito para uso prolongado, enquanto a bateria de longa duração garante horas de som cristalino. Ideal para quem busca excelência sonora em todos os detalhes.</p>
+                <a href="buyAirmax.html" class="button-go"> Adquirir </a>
             </div>
 
         </section>
 
 
     </main>
+
+    <script src="script/script.js"></script>
 </body>
 </html>

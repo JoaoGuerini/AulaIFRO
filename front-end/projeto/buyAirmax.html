@@ -10,16 +10,29 @@
 </head>
 <body>
     <header>
-        <div class="title">
-            <img src="source/img/Design sem nome.png" alt="">
+        <div class="nav-list">
+            <div id="img-logo">
+                <img src="source/img/Design sem nome.png" alt="">
+            </div>
+            <nav>
+                <ul class="ul-resp">
+                    <li><a href="">Início</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+                
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><img src="source/img/menu_white_36dp.svg"> </button>
+                </div>
+            </nav>
         </div>
-        <nav>
+
+        <div class="mobile-menu">
             <ul>
-                <li><a href="">Início</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Contato</a></li>
+                <li class="nav-item"><a href="index.html">Início</a></li>
+                <li class="nav-item"><a href="contato.html">Contato</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
     <main>
@@ -37,10 +50,10 @@
                     </a>
                 </div>
                 
-                <h2>WaterPods</h2>
+                <h2>WaterPods Max</h2>
 
                 <div class="div-preco">
-                    <span class="span-principal">R$ <strong>1.899,99</strong></span>
+                    <span class="span-principal">R$ <strong>6.590,99</strong></span>
                     <p>ou em 12x de RS <strong>549,17</strong> </p>
                 </div>
 
@@ -55,7 +68,7 @@
 
                 <div class="div-estoque">
                     <p><strong class="span-principal">Estoque Disponivel</strong></p>
-                    <p>Quantidade: 200 unidades</p>
+                    <p>Quantidade: 99 unidades</p>
                 </div>
 
                 <div class="button-div">
@@ -64,7 +77,7 @@
 
                 <div class="div-dados">
                     <span>Loja Oficial - <strong>WaterPods</strong></span>
-                    <span>Novo | <strong>1.000</strong> Vendidos</span>
+                    <span>Novo | <strong>5.000+</strong> Vendidos</span>
                 </div>
 
                 <div class="teste">
@@ -73,5 +86,7 @@
             </div>
         </section>
     </main>
+
+    <script src="script/script.js"></script>
 </body>
 </html>
