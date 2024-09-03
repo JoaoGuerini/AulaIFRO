@@ -5,6 +5,7 @@ body{
 }
 
 main{
+
     display: flex;
     flex-direction: column;
     gap: 20vh;
@@ -84,9 +85,7 @@ strong{
 
 @media screen and (max-width: 1020px){
 
-    body{
-        margin: 10vh;
-    }
+
 
     section{
         width: 100%;

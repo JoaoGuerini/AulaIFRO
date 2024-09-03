@@ -1,16 +1,38 @@
 
 
+footer{
+    display: flex;
+    margin: 1vh;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8vh;
+    background-color: #132456;
+    color: white;
+    font-size: 2.5vh;
+}
+
+footer > strong{
+    color: brown;
+}
+
+.container-1, .container-2, .container-3{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
 
 
-
-
-
-
-
-
-
-
-
+.div-linkedin,
+.div-instagram,
+.div-github,
+.div-sobre,
+.div-diretrizes,
+.div-fale,
+.div-email{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh;
+}
 
 @media screen and (max-width: 1020px){
     body{
