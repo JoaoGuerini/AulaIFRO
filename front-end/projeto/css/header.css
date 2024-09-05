@@ -14,6 +14,7 @@ img{
 
 }
 
+
 a{
     font-size: 23px;
     text-decoration: none;
@@ -42,6 +43,9 @@ ul{
     display: none;
 }
 
+.menu-ico{
+    width: 9vh;
+}
 .mobile-menu{
     display: none;
 }
