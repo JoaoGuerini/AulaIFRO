@@ -1,11 +1,11 @@
 body{
-    margin-left: 15vh;
-    margin-bottom: 15vh;
+
     background-color: #0C1839;
 }
 
 main{
-
+    margin-left: 15vh;
+    margin-bottom: 15vh;
     display: flex;
     flex-direction: column;
     gap: 20vh;
@@ -85,7 +85,10 @@ strong{
 
 @media screen and (max-width: 1020px){
 
+    main{
+        margin: 10vh 0vh;
 
+    }
 
     section{
         width: 100%;

@@ -1,8 +1,79 @@
-
-
 footer{
     display: flex;
-    margin: 1vh;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8vh;
+    background-color: #132456;
+    color: white;
+    font-size: 2.5vh;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+h2{
+    margin-left: 0vh;
+    font-weight: 0vh;
+    font-size: 0vh;
+}
+
+.strong-footer{
+    font-size: 2.5vh;
+    color: #0072ff;
+}
+
+.container-1, 
+.container-2, 
+.container-3{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.div-linkedin,
+.div-instagram, 
+.div-github,
+.div-sobre,
+.div-diretrizes,
+.div-fale,
+.div-email{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh;
+}
+
+@media screen and (max-width: 1020px){
+    footer{
+        font-size: 1.8vh;
+        width: calc(100% - 20%);
+    }
+
+    .container-1, 
+    .container-2, 
+    .container-3{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 30%;
+
+    }
+
+    .strong-footer{
+        font-size: 1.8vh;
+    }
+
+    * svg{
+        display: none;
+    }
+    
+}
+
+
+
+
+
+
+/* 
+footer{
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 8vh;
@@ -15,12 +86,13 @@ footer > strong{
     color: brown;
 }
 
-.container-1, .container-2, .container-3{
+.container-1, 
+.container-2, 
+.container-3{
     display: flex;
     flex-direction: column;
     gap: 4vh;
 }
-
 
 .div-linkedin,
 .div-instagram,
@@ -35,7 +107,13 @@ footer > strong{
 }
 
 @media screen and (max-width: 1020px){
-    body{
+    footer{
         margin: 0;
     }
-}
+
+    
+    * svg{
+        display: none;
+    }
+    
+} */
