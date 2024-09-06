@@ -4,7 +4,7 @@ body{
 }
 
 main{
-
+    margin-left: 18vh;
     margin-bottom: 15vh;
     display: flex;
     flex-direction: column;
@@ -36,7 +36,6 @@ strong{
 }
 
 .div-content{
-    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,6 +86,7 @@ strong{
 
 
     main{
+        margin: 0;
         justify-content: center;
         align-items: center;
 
@@ -95,7 +95,7 @@ strong{
     section{
         justify-content: center;
         align-items: center;
-        width: 100%; 
+        width: 90%; 
         flex-direction: column;
         padding: 2vh; 
     }
@@ -122,6 +122,7 @@ strong{
     .div-content > p {
         width: 35vh;
         text-align: start;
+        font-size: 18px;
     }
     
     #waterpods {
@@ -146,5 +147,13 @@ strong{
 
     #watermax{
         width: 30vh;
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .div-content > p {
+        width: 35vh;
+        text-align: start;
+        font-size: 25px;
     }
 }

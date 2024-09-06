@@ -43,8 +43,9 @@ h2{
 
 @media screen and (max-width: 1020px){
     footer{
+        margin-top: 15vh;
         font-size: 1.8vh;
-        width: 100%;
+ 
     }
 
     .container-1, 
@@ -66,10 +67,10 @@ h2{
     
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 0px) and (max-width: 515px) {
     footer{
         flex-wrap: nowrap;
-        width: 62%;
+        width: auto;
     }
 
     .div-linkedin > p ,
@@ -122,53 +123,3 @@ h2{
         display: block;
     }
 }
-
-
-
-
-/* 
-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 8vh;
-    background-color: #132456;
-    color: white;
-    font-size: 2.5vh;
-}
-
-footer > strong{
-    color: brown;
-}
-
-.container-1, 
-.container-2, 
-.container-3{
-    display: flex;
-    flex-direction: column;
-    gap: 4vh;
-}
-
-.div-linkedin,
-.div-instagram,
-.div-github,
-.div-sobre,
-.div-diretrizes,
-.div-fale,
-.div-email{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1vh;
-}
-
-@media screen and (max-width: 1020px){
-    footer{
-        margin: 0;
-    }
-
-    
-    * svg{
-        display: none;
-    }
-    
-} */
