@@ -1,9 +1,13 @@
 body{
-    margin-left: 15vh;
-    margin-bottom: 15vh;
+
     background-color: #0C1839;
 }
 
+main{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15vh;
+}
 
 h2{
     margin-left: 1vh;

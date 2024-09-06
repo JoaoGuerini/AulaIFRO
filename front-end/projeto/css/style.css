@@ -1,10 +1,10 @@
 body{
-
+    
     background-color: #0C1839;
 }
 
 main{
-    margin-left: 15vh;
+
     margin-bottom: 15vh;
     display: flex;
     flex-direction: column;
@@ -53,6 +53,7 @@ strong{
 }
 
 .button-go{
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +73,6 @@ strong{
 
 .button-go:hover{
     background-color: #0072ff;
-
 }
 
 #waterpods {
@@ -85,13 +85,17 @@ strong{
 
 @media screen and (max-width: 1020px){
 
+
     main{
-        margin: 10vh 0vh;
+        justify-content: center;
+        align-items: center;
 
     }
 
     section{
-        width: 100%;
+        justify-content: center;
+        align-items: center;
+        width: 100%; 
         flex-direction: column;
         padding: 2vh; 
     }
@@ -99,11 +103,11 @@ strong{
     .div-img{
         align-items: center;
         justify-content: center;
-        margin: 8vh; 
+        margin: 8vh;   
+
     }
 
     .div-img > h2 {
-        margin: 0; 
         font-size: 30px;
         text-align: center; 
     }
@@ -111,22 +115,36 @@ strong{
     .div-content{
         justify-content: center;
         align-items: center;
-        margin: 0 auto; 
         padding: 0 5vh; 
         text-align: center; 
     }
 
     .div-content > p {
-        width: 50vh;
+        width: 35vh;
         text-align: start;
     }
     
     #waterpods {
-        width: 70vh;
+        width: 40vh;
     }
 
     #watermax{
-        width: 50vh;
+        width: 40vh;
     }
 
+}
+
+@media screen and (max-width: 350px) {
+    .div-content > p {
+        width: 20vh;
+        
+    }
+
+    #waterpods {
+        width: 30vh;
+    }
+
+    #watermax{
+        width: 30vh;
+    }
 }

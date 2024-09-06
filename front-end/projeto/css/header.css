@@ -3,6 +3,9 @@ img{
     min-width: 1vh;
 }
 
+header {
+    margin-left: 15vh;
+}
 .nav-list{
     
     margin: 20px 0px;
@@ -52,6 +55,10 @@ ul{
 
 @media screen and (max-width: 730px){
     body{
+        margin: 0;
+    }
+    
+    header{
         margin: 0;
     }
 
