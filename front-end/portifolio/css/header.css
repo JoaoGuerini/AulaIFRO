@@ -11,6 +11,8 @@ header{
     align-items: center;
     justify-content: space-between;
     border: 1px solid black;
+    position: relative;
+    z-index: 10;
 }
 
 .title-header{
@@ -50,7 +52,16 @@ li{
     width: 9vh;
 }
 .mobile-menu{
+    margin-top: 0.1vh;
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 2px black solid;
+    border-top: none;
+    z-index: 9;
 }
 
 @media screen and (max-width: 1065px){

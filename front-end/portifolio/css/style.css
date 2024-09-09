@@ -233,6 +233,11 @@ hr{
 }
 
 @media screen and (max-width: 1570px){
+
+    body {
+        overflow-x: hidden;
+      }
+
     * h2{
         font-size: 5vh;
     }
@@ -268,7 +273,6 @@ hr{
         justify-content: center;
         align-items: center;
         width: 100%;
-        background-color: red;
         flex-wrap: wrap;
         font-size: 5vh;
         width: 100%;
@@ -319,7 +323,7 @@ hr{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
+        margin-bottom: 10vh;
     }
     
     .card-att-div, 
@@ -331,6 +335,7 @@ hr{
         align-items: center;
         width: 50%;
         gap: 20vh;
+        line-height: 5vh;
     }
     
     .diario-img{
@@ -379,14 +384,27 @@ hr{
     }
     
     #section-contato{
+        background-color: red;
         display: flex;
+        width: 100%;
         flex-direction: column;
         justify-content: center;
-        margin: 0vh;
+        margin: 1vh;
         gap: 10vh;
         background-color: #fff;
     }
 
-    
+    .div-title-contato{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        gap: 0;
+
+    }
+
+    .div-title-contato > h2{
+        display: flex;
+        justify-content: center;
+    }
     
 }
