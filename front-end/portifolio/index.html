@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | João Guerini</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    <header>
+        <div class="nav-list">
+            <div class="title-header">
+                <h3>João Guerini</h3>
+            </div>
+            <nav>
+                <ul class="ul-resp">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Projetos</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+                
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><img src="source/icon-black.png" class="menu-ico"> </button>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="">Home</a></li>
+                <li class="nav-item"><a href="">Sobre</a></li>
+                <li class="nav-item"><a href="">Projetos</a></li>
+                <li class="nav-item"><a href="">Contato</a></li>
+            </ul>
+        </div>
+
+    </header>
+    <main>
+        <section id="section-home">
+            <div class="container-infos-home">
+                <h5>JOÃO GUERINI</h5>
+                <h1>Programador Aprendiz</h1>
+                <h3>Há um ano, comecei a estudar programação e, desde então, venho aprendendo e praticando diversas tecnologias. Tenho vontade de seguir na área e trabalhar em projetos que ajudem empresas a crescer. Meu foco é continuar evoluindo e me tornar um desenvolvedor cada vez mais capacitado.</h3>
+                <img src="source/me-img.png" class="me-img-show" alt="">
+            </div>
+        </section>
+        <hr>
+        <section id="section-sobre">
+            <div class="div-title-sobre">
+                <h2 class="title-sobre">Sobre</h2>
+            </div>
+            <div class="container-infos-sobre">
+                <img src="./source/img-sobre.jpeg" alt=""> 
+                <p>Meu nome é João Guerini, nasci em 2008 na cidade de São Gabriel do Oeste/MT e atualmente tenho 16 anos. Desde cedo, sempre tive uma curiosidade natural por tecnologia, o que me levou a aprender linguagens como HTML, CSS, JavaScript e React Native. Sou autodidata e dedico boa parte do meu tempo livre ao estudo de desenvolvimento web e mobile. Acredito que, para se destacar nessa área, é essencial estar sempre se atualizando e aprendendo novas ferramentas e técnicas. No futuro, quero me tornar um desenvolvedor habilidoso, capaz de criar soluções que impactem positivamente o mundo ao meu redor.</p>
+            </div>
+        </section>
+        <hr>
+        <section id="section-projetos">
+            <div class="cards-geral">
+                <div class="div-title-projetos">
+                    <h2>Projetos</h2>
+                </div>
+                
+                <div class="card-att-div">
+                    <a href="../att-livro/index.html" target="_blank">
+                        <h3>Atividade Sobre Divs</h3>
+                        <img src="source/divulg-livro.png" alt="">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae excepturi quisquam, suscipit ad ut hic iure dolorum non ducimus recusandae odit soluta molestias cumque veritatis cum quos. Molestias, ratione magnam!</p>
+                    </a>
+                </div>
+                
+                <div class="card-att-livro">
+                    <a href="../att-dbn/index.html" target="_blank">
+                        <h3>Diário de um Banana</h3>
+                        <img class="diario-img" src="source/diario2-img.png" alt="">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum amet nihil tenetur distinctio repudiandae mollitia magnam laborum enim repellat temporibus, necessitatibus asperiores sunt eos officia dolor praesentium. Error, esse itaque.</p>
+                    </a>
+                </div>
+             
+                <div class="card-projeto-pesquisa">
+                    <a href="https://github.com/Lizynmc/CodigoWebScraping" target="_blank">
+                        <h3>DashBoard Interativo</h3>
+                        <img src="source/websrcaping.png" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ipsum iste, reiciendis sint facere neque nisi impedit quidem minima quos porro placeat blanditiis quam laboriosam rerum autem omnis cumque ea.</p>
+                    </a>
+                </div>
+
+                <div class="card-waterpods">
+                    <a href="../projeto/index.html" target="_blank">
+                        <h3>Site WaterPods</h3>
+                        <img src="source/watterpods.png" alt="">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, hic non error illum aliquid a ipsa mollitia architecto fugit accusantium sint, neque omnis eveniet at. Molestias cum et voluptatum. Illum!</p>
+                    </a>
+                </div>
+            </div>
+
+
+        </section>
+        <hr>
+        <section id="section-contato">
+            <div class="div-title-contato">
+                <h2>Contato</h2>
+            </div>
+
+            <div class="div-contato">
+                <form action="https://formsubmit.co/joaoguerinidev@gmail.com" method="POST">
+                    <input type="text" placeholder="Nome">
+                    <input type="email" placeholder="Email" id="email"><br>
+                    <input type="text" id="text" placeholder="Assunto da Duvida"><br> 
+                    <textarea name="text" placeholder="Digite a sua mensagem..."></textarea><br>
+                    <input type="hidden" name="_next" value="https://nathantlopes.github.io/Sites/Viagem%20do%20Gurismo/">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <script src="script/script.js"></script>
+</body>
+</html>

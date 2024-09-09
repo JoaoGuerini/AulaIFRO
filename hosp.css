@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    top: 20px;
+    background-image: url('wallpaper1.webp');
+    background-position: center -100px;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    height: 100vh;
+    width: 20%;     
+}
+
+.div-lateral {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(wallpaper2.jpg);
+    background-position: -260px;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+a{
+    padding: 1.5vh;
+    border-radius: 8px;
+    background-color: #1A75BC;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 1.1s ease;
+}
+
+a:hover{
+    background-color: white; 
+    color: #1A75BC;
+}
