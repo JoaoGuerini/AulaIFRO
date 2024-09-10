@@ -238,12 +238,17 @@ hr{
 
 @media screen and (max-width: 1570px){
 
-    body {
+    main{
+        width: 80%;
+        margin: 1vh;
+
+    }
+    html {
         overflow-x: hidden;
       }
 
     * h2{
-        font-size: 5vh;
+        font-size: 3vh;
     }
 
     *{
@@ -311,8 +316,8 @@ hr{
     }
     
     .container-infos-sobre > img{
-        width: 40vh;
-        height: 40vh;
+        width: 20vh;
+        height: 20vh;
         border: 2px solid black;
         border-radius: 2px;
         margin-bottom: 3vh;
@@ -337,19 +342,20 @@ hr{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 25vh;
         gap: 20vh;
         line-height: 5vh;
     }
     
     .diario-img{
-        width: 40vh;
+        width: 25vh;
     }
     
     .card-att-div > a > img, 
     .card-projeto-pesquisa > a > img,
     .card-waterpods > a > img{
-        width: 40vh;
+        margin: auto;
+        width: 20vh;
     }
     
     .card-att-div > a , 
