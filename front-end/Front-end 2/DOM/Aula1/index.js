@@ -45,7 +45,10 @@ body.querySelector('h1').remove()
 
 ul.appendChild(l1)
 ul.appendChild(l2)
-ul.appendChild(l3)  
+ul.appendChild(l3) 
+ 
 
 body.appendChild(ul)
 body.appendChild(ancora)
+
+//prepend é a função que adiciona uma element no inicio
