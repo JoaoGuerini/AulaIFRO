@@ -5,6 +5,7 @@ const itensMenu = [
     {nome: 'Inicio', url: 'index.html'},
     {nome: 'Sobre', url: 'sobre.html'},
     {nome: 'Contato', url: 'contato.html'},
+    {nome: 'Contato', url: 'contato.html'},
     {nome: 'Contato', url: 'contato.html'}
 ]
 
@@ -17,10 +18,8 @@ const getList = () => {
         const a = document.createElement('a')
         a.setAttribute("href", menu.url)
         a.textContent = menu.nome.toUpperCase()
-
         a.style.color = 'white'
         a.style.textDecoration = 'none'
-
         itemLi.appendChild(a)        
     })
     return itemLi
