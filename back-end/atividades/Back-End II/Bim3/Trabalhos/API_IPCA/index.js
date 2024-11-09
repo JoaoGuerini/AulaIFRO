@@ -4,14 +4,17 @@ import express from "express";
 const app = express()
 
 app.get('/historicoIPCA', (req, res) =>{
-    // const dados = returnAll()
+    const dados = returnAll()
     const inputYear = req.query.ano
 
-    const dadosAno = returnYears(inputYear)
-    res.json(dadosAno)
-    // res.json(dados)
-    
+    if(inputYear != undefined){
+        const dadosAno = returnYears(inputYear)
+        res.json(dadosAno)
+    }
 
+    else{
+        res.json(dados)
+    }
 })
 
 app.get('/historicoIPCA/calculo', (req, res) => {
@@ -20,8 +23,10 @@ app.get('/historicoIPCA/calculo', (req, res) => {
     const anoInicial = parseInt(req.query.anoInicial)
     const mesFinal = parseInt(req.query.mesFinal)
     const anoFinal = parseInt(req.query.anoFinal)
+    
+    const resultado = returnCalc(valor, mesInicial, anoInicial, mesFinal, anoFinal)
 
-    res.json(returnCalc(valor, mesInicial, anoInicial, mesFinal, anoFinal))
+    res.json(resultado)
 })
 
 app.get('/historicoIPCA/:id', (req, res) => {
