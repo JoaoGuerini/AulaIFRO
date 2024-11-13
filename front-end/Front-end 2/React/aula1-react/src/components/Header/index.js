@@ -22,7 +22,11 @@ export default function Header() {
                             Contato
                         </Link>
                     </li>
-
+                    <li>
+                        <Link href={'/states'}>
+                            State
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>
