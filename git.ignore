@@ -1,0 +1,43 @@
+# Dependências
+/node_modules/
+
+# Build de Next.js
+/.next/
+/out/
+
+# Diretórios de produção
+/build/
+
+# Arquivos temporários
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de configuração do editor de código (exemplo com VSCode)
+.vscode/
+
+# Ambiente de execução (se você usar arquivos `.env` para configuração)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Arquivos de cache de dependências, caso utilize o Yarn
+/.pnp
+.pnp.*
+
+# Git LFS
+*.psd
+*.mp4
+*.zip
+
+# Arquivos específicos de sistemas operacionais
+Thumbs.db
+Desktop.ini
+
+# Outras pastas temporárias do editor
+.idea/
+*.sublime-workspace
+*.sublime-project
