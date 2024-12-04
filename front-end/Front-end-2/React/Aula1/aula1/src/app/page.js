@@ -6,7 +6,6 @@ export default function Home() {
   const nome = 'Marcos'
   return (
     <div>
-        <Header />
         <h1 className={styles.h1}>Luisito Genio Suarez</h1>
         <p>Parágrafo da primeira página</p>
         <p>Autor: {nome}</p>
