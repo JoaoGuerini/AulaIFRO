@@ -6,8 +6,8 @@ export const metadata = {
   title: "Minha primeira aplicação",
   description: "Uma descrição bem legal",
   charset: 'UTF-8',
-  author: 'Marcos Vinícius',
-  keywords: 'Bitcoin, BTC, bitcoin, satoshi, libedad carahoooo',
+  author: 'João Pedro',
+  keywords: 'Seila fi',
 };
 
 export default function RootLayout({ children }) {
