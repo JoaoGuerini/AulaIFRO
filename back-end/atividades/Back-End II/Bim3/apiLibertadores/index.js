@@ -15,7 +15,7 @@ const app = express()
 // })
 
 app.get('/campeonatos', async(req, res) => {
-    let campeonatos;
+ 
     const ano = req.query.ano
     const time = req.query.time
 
@@ -39,12 +39,19 @@ app.get('/campeonatos', async(req, res) => {
 
 app.get('/campeonatos/:id', async(req, res) => {
     const id = parseInt(req.params.id)
+    if (id <= 0 ){
+        console.log('caiu')
+        res.status(404).json({mensagem: "Erro"})
+        return
+    }
+
     const campeonato = await retornaCampeonatosID(id)
+    
     if(campeonato.length > 0){
         res.json(campeonato)
     }
     else{
-        res.json(404).json({mensagem: "Nenhum campeonato foi encontrado"})
+        res.status(404).json({mensagem: "Nenhum campeonato foi encontrado"})
     }
 })
 
