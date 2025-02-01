@@ -2,10 +2,10 @@ import mysql from 'mysql2/promise'
 
 const pool = mysql.createPool(
     {
-        host: 'clinica',
+        host: 'localhost',
         user: 'userEscola',
-        password: 'liberta1234',
-        database: 'libertadores'
+        password: 'userescola123',
+        database: 'clinica'
     }
 )
 
