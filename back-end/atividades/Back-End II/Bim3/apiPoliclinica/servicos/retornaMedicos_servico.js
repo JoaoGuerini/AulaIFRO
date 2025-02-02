@@ -2,7 +2,7 @@ import pool from "./conexao.js";
 
 export async function retornaMedicos() {
     const conexao = await pool.getConnection()
-    const query = "SELECT * FROM medicos ORDER BY nome"
+    const query = "SELECT m.id, m.nome, m.telefone, m.email, e.especialidade FROM medicos AS m JOIN especialidades AS e ON m.especialidade = e.id ORDER BY m.nome"
     const res = executaQuery(conexao, query)
     conexao.release()
 

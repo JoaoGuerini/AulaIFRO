@@ -1,7 +1,16 @@
 import express from 'express'
+import cors from 'cors';
 import { retornaMedicos, retornaMedicosEspecialidade, retornaMedicosNome } from './servicos/retornaMedicos_servico.js'
 
 const app = express()
+
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    methods: 'GET,POST',
+    allowedHeaders: 'Content-Type',
+  };
+  
+  app.use(cors(corsOptions));
 
 app.get('/medicos', async(req, res) =>{
     const nome = req.query.nome
