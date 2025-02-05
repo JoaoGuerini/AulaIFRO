@@ -7,7 +7,7 @@ export default function Header(){
     return(
         <header className={styles.Header}>
             <div className={styles.divImg}>
-                <Image src={logo} width={200} height={200}></Image>
+                <Image src={logo} width={100} height={100} alt='Logo'></Image>
             </div>
             <nav className={styles.HeaderNav}>
                 <ul className={styles.HeaderUl}>
@@ -15,16 +15,31 @@ export default function Header(){
                         <a href='/'>Home</a>
                     </li>
                     <li className={styles.HeaderLi}>
-                        <a href='/listaMedica'>Médicos</a>
-                        <ul></ul>
+                        <a href='#'>Médicos</a>
+                        <ul className={styles.dropdownUL}>
+                            <li className={styles.dropdownLI}><a href='/listaMedica'>Listar</a></li>
+                            <li className={styles.dropdownLI}><a href='#'>Adicionar</a></li>
+                            <li className={styles.dropdownLI}><a href='#'>Editar</a></li>
+                            <li className={styles.dropdownLI}><a href='#'>Excluir</a></li>
+                        </ul>
                     </li>
                     <li className={styles.HeaderLi}>
                         <a href='#'>Pacientes</a>
-                        <ul></ul>
+                        <ul className={styles.dropdownUL}>
+                            <li className={styles.dropdownLI}><a href='#'>Listar</a></li>
+                            <li className={styles.dropdownLI}><a href='#'>Adicionar</a></li>
+                            <li className={styles.dropdownLI}><a href='#'>Editar</a></li>
+                            <li className={styles.dropdownLI}><a href='#'>Excluir</a></li>
+                        </ul>
                     </li>
                     <li className={styles.HeaderLi}>
                         <a href='#'>Agendamento</a>
-                        <ul></ul>
+                        <ul className={styles.dropdownUL}>
+                            <li className={styles.dropdownLI}><a href='#'>Listar Consultas</a></li>
+                            <li className={styles.dropdownLI}><a href='#'>Agendar Consultas</a></li>
+                            <li className={styles.dropdownLI}><a href='#'>Editar Consultas</a></li>
+                            <li className={styles.dropdownLI}><a href='#'>Cancelar</a></li>
+                        </ul>
                     </li>
                 </ul>
             </nav>

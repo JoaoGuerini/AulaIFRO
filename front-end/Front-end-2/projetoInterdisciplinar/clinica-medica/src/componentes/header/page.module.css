@@ -1,5 +1,6 @@
 .Header{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: black;
 }
@@ -25,4 +26,32 @@
 .HeaderLi{
     list-style-type: none;
     font-size: 17pt;
+    font-family: monospace;
+}
+
+.dropdownUL{
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.dropdownLI{
+    list-style-type: none;
+    position: relative;
+    padding: 1.2vh;
+    min-width: 20vh;
+    border-bottom: 2px #ccc solid;
+    font-size: 13pt;
+    font-family: monospace;
+    font-weight: 500;
+    color: black;
+}
+.dropdownLI:last-child{
+    border-bottom: none;
+}
+
+.HeaderLi:hover .dropdownUL{
+    display: block;
 }
