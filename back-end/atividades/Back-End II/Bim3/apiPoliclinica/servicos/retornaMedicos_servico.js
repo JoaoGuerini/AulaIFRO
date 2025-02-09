@@ -11,7 +11,7 @@ export async function retornaMedicos() {
 
 export async function retornaMedicosNome(nome) {
     const conexao = await pool.getConnection()
-    const query = `SELECT m.id, m.nome, m.telefone, m.email, e.especialidade FROM medicos AS m JOIN especialidades AS e ON m.especialidade = e.id AND m.nome LIKE '%${nome}%`
+    const query = `SELECT m.id, m.nome, m.telefone, m.email, e.especialidade FROM medicos AS m JOIN especialidades AS e ON m.especialidade = e.id AND m.nome LIKE '%${nome}%'`
     const res = executaQuery(conexao, query)
     conexao.release()
 

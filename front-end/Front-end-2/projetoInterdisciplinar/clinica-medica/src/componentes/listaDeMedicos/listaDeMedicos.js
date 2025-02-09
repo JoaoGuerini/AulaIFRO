@@ -3,10 +3,10 @@ import React, { useEffect, useState } from 'react';
 import styles from "./page.module.css";
 
 const ListaDeMedicos = () => {
-  const [medicos, setMedicos] = useState(['']);
+  const [medicos, setMedicos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [busca, setBusca] = useState("")
-  const medicoBusca = medicos.filter(medico => (medico.toLocaleLowerCase().startsWith(busca.toLocaleLowerCase())));
+  const medicoBusca = medicos.filter(medico => medico.nome.toLocaleLowerCase().startsWith(busca.toLocaleLowerCase()));
   const [error, setError] = useState(null); 
   
 
