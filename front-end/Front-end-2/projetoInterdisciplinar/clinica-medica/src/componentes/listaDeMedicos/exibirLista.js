@@ -1,8 +1,8 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import styles from "./page.module.css";
 
-const ListaDeMedicos = () => {
+export default function ExibirLista ({url, tipoPagina}){
   const [medicos, setMedicos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [busca, setBusca] = useState("")
@@ -11,9 +11,11 @@ const ListaDeMedicos = () => {
   
 
   useEffect(() => {
+    setMedicos([])
+
     const fetchMedicos = async () => {
       try {
-        const res = await fetch('http://localhost:7777/medicos');
+        const res = await fetch(url);
         if (!res.ok) {
           throw new Error(`Erro ao buscar os dados ${res.status}`);
         }
@@ -56,24 +58,32 @@ const ListaDeMedicos = () => {
           <tr>
             <th>ID</th>
             <th>Nome</th>
-            <th>Telefone</th>
-            <th>Email</th>
-            <th>Especialidade</th>
+            {tipoPagina == 'Medico' || 'Paciente' ? <th>Telefone</th> : null}
+            {tipoPagina == 'Medico' || 'Paciente' ? <th>Email</th> : null}
+            {tipoPagina == 'Consulta' ? <th>Medico</th> : null}
+            {tipoPagina == 'Consulta' ? <th>Paciente</th> : null}
+            {tipoPagina == 'Consulta' ? <th>Tipo</th> : null}
+            {tipoPagina == 'Medico' ? <th>Especialidade</th>: null}
+            {tipoPagina == 'Paciente' ? <th>CPF</th> : null}
           </tr>
         </thead>
+      
         <tbody className={styles.corpoTabela}>
           {medicos.map((medico, index) => (
             <tr key={medico.id} className={index % 2 === 0 ? styles.linhaClara : ""}>
               <td>{medico.id}</td>
               <td>{medico.nome}</td>
-              <td>{medico.telefone}</td>
-              <td>{medico.email}</td>
-              <td>{medico.especialidade}</td>
+              {tipoPagina == 'Paciente' || 'Medico' ? <td>{medico.telefone}</td> : null}
+              {tipoPagina == 'Paciente' || 'Medico' ? <td>{medico.email}</td> : null}
+              {tipoPagina == 'Paciente' ? <td>{medico.cpf}</td> : null}
+              {tipoPagina == 'Medico' ? <td>{medico.especialidade}</td> : null}
+              {tipoPagina == 'Consulta' ? <td>{medico.medico}</td> : null}
+              {tipoPagina == 'Consulta' ? <td>{medico.paciente}</td> : null}
+              {tipoPagina == 'Consulta' ? <td>{medico.tipo}</td> : null}
+
             </tr>))}
         </tbody>
       </table>
     </div>
   );
 };
-
-export default ListaDeMedicos;
