@@ -1,17 +1,18 @@
 {
-  "name": "front-end-2",
+  "name": "apipoliclinica",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "framer-motion": "^11.11.17",
-    "next": "^15.0.3",
-    "react": "^18.3.1"
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0"
   }
 }
