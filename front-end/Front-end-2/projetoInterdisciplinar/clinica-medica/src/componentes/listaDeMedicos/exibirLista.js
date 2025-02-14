@@ -6,7 +6,16 @@ export default function ExibirLista ({url, tipoPagina}){
   const [medicos, setMedicos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [busca, setBusca] = useState("")
-  const medicoBusca = medicos.filter(medico => medico.nome.toLocaleLowerCase().startsWith(busca.toLocaleLowerCase()));
+  var medicoBusca = null
+  console.log(tipoPagina)
+
+  if (tipoPagina === 'Medico' || tipoPagina === 'Paciente') {
+    medicoBusca = medicos.filter(medico => medico.nome.toLocaleLowerCase().startsWith(busca.toLocaleLowerCase()))
+
+  }
+  else{
+    medicoBusca = medicos.filter(consulta => consulta.medico.toLocaleLowerCase().startsWith(busca.toLocaleLowerCase()))
+  }
   const [error, setError] = useState(null); 
   
 
@@ -14,7 +23,7 @@ export default function ExibirLista ({url, tipoPagina}){
     setMedicos([])
 
     const fetchMedicos = async () => {
-      try {
+      try { 
         const res = await fetch(url);
         if (!res.ok) {
           throw new Error(`Erro ao buscar os dados ${res.status}`);
@@ -28,6 +37,8 @@ export default function ExibirLista ({url, tipoPagina}){
       } finally {
         setLoading(false);
       }
+
+      
     };
 
     fetchMedicos();
@@ -57,14 +68,14 @@ export default function ExibirLista ({url, tipoPagina}){
         <thead>
           <tr>
             <th>ID</th>
-            <th>Nome</th>
-            {tipoPagina == 'Medico' || 'Paciente' ? <th>Telefone</th> : null}
-            {tipoPagina == 'Medico' || 'Paciente' ? <th>Email</th> : null}
-            {tipoPagina == 'Consulta' ? <th>Medico</th> : null}
+            {tipoPagina == 'Medico' || tipoPagina == 'Paciente' ? <th>Nome</th>: null}
+            {tipoPagina == 'Medico' || tipoPagina == 'Paciente' ? <th>Telefone</th>: null} 
+            {tipoPagina == 'Medico' || tipoPagina == 'Paciente' ? <th>Email</th> : null}
+            {tipoPagina == 'Consulta'  ? <th>Medico</th> : null}
+            {tipoPagina == 'Medico' || tipoPagina == 'Consulta' ? <th>Especialidade</th>: null}
+            {tipoPagina == 'Paciente' ? <th>CPF</th> : null}
             {tipoPagina == 'Consulta' ? <th>Paciente</th> : null}
             {tipoPagina == 'Consulta' ? <th>Tipo</th> : null}
-            {tipoPagina == 'Medico' ? <th>Especialidade</th>: null}
-            {tipoPagina == 'Paciente' ? <th>CPF</th> : null}
           </tr>
         </thead>
       
@@ -73,17 +84,16 @@ export default function ExibirLista ({url, tipoPagina}){
             <tr key={medico.id} className={index % 2 === 0 ? styles.linhaClara : ""}>
               <td>{medico.id}</td>
               <td>{medico.nome}</td>
-              {tipoPagina == 'Paciente' || 'Medico' ? <td>{medico.telefone}</td> : null}
-              {tipoPagina == 'Paciente' || 'Medico' ? <td>{medico.email}</td> : null}
+              <td>{medico.telefone}</td>
+              {tipoPagina == 'Paciente' || tipoPagina == 'Medico' ? <td>{medico.email}</td> : null}
               {tipoPagina == 'Paciente' ? <td>{medico.cpf}</td> : null}
-              {tipoPagina == 'Medico' ? <td>{medico.especialidade}</td> : null}
+              {tipoPagina == 'Medico' || tipoPagina == 'Consulta' ? <td>{medico.especialidade}</td> : null}
               {tipoPagina == 'Consulta' ? <td>{medico.medico}</td> : null}
               {tipoPagina == 'Consulta' ? <td>{medico.paciente}</td> : null}
               {tipoPagina == 'Consulta' ? <td>{medico.tipo}</td> : null}
-
             </tr>))}
         </tbody>
-      </table>
+      </table> 
     </div>
   );
 };
