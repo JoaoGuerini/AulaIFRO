@@ -6,7 +6,7 @@ import ExibirLista from "@/componentes/listaDeMedicos/exibirLista.js";
 export default function listaPaciente() {
   return (
     <div>
-      <ExibirLista url={'https://api-clinica-2a.onrender.com/pacientes'} tipoPagina={'Paciente'}/>
+      <ExibirLista url={'https://api-clinica-2a.onrender.com/pacientes'} tipoPagina={'Pacientes'}/>
     </div>
   );
 }

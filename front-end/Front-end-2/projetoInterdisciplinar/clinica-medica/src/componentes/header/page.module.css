@@ -41,7 +41,8 @@
     list-style-type: none;
     position: relative;
     padding: 1.2vh;
-    min-width: 20vh;
+    min-width: 6.5vh;
+    max-width: 20vh;
     border-bottom: 2px #ccc solid;
     font-size: 13pt;
     font-family: monospace;
@@ -54,4 +55,50 @@
 
 .HeaderLi:hover .dropdownUL{
     display: block;
+}
+
+@media (min-width: 400px) and (max-width: 780px){
+    .Header {
+        flex-direction: row;
+        align-items: flex-start;
+        min-height: 8vh;
+    }
+
+    .divImg {
+        display: none; 
+    }
+
+    .HeaderNav {
+        width: 70%;
+        justify-content: flex-start;
+    }
+
+    .HeaderUl {
+        display: flex;
+        flex-direction: row;
+        gap: 5vh;
+        width: 70%; 
+        
+    }
+
+    .HeaderLi {
+        font-size: 12pt;
+        width: 50%; 
+    }
+
+    .dropdownUL {
+        position: static; 
+        box-shadow: none;
+        display: none;
+        width: 70%;
+    }
+
+    .HeaderLi:hover .dropdownUL {
+        display: block;
+    }
+
+    .dropdownLI {
+        font-size: 9pt;
+        width: 10%; 
+    }
 }

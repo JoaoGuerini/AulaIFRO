@@ -2,57 +2,112 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20vh 35vh;
-    padding: 5vh 0vh;
+    margin: 5vh auto;
+    padding: 3vh 2vw;
     border-radius: 10px;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 30px, 
+                rgba(0, 0, 0, 0.12) 0px -5px 15px, 
+                rgba(0, 0, 0, 0.12) 0px 2px 5px, 
+                rgba(0, 0, 0, 0.17) 0px 6px 10px, 
+                rgba(0, 0, 0, 0.09) 0px -2px 3px;
+    width: 90%;
+    max-width: 1200px;
 }
 
-.title{
-    font-size: 35pt;
+.title {
+    font-size: 28pt;
     color: #3aceb5;
     font-family: monospace;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-  
 .tabela {
-    width:95%;
-    margin: 5vh;
+    width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
     word-wrap: break-word;
     font-family: Arial, sans-serif;
-    justify-content: center;
-    align-items: center; 
 }
-  
+
 .tabela th {
-    width: 100%;    
     background-color: #222;
     color: white;
-    padding: 10px;
+    padding: 12px;
+    text-align: left;
 }
-  
+
 .tabela td {
-    padding: 10px;
+    padding: 12px;
     background-color: white;
     color: #222;
-    padding: 30px;
     border: 1px solid #ccc;
 }
 
-.linhaClara td{
+.linhaClara td {
     background-color: #ededed;
-    color: #222;
-
 }
 
-.corpoTabela td{
+.corpoTabela td {
     transition: background-color 0.4s ease;
 }
 
-.corpoTabela tr:hover td{
+.corpoTabela tr:hover td {
     background-color: #3aceb5 !important;
     cursor: pointer;
+}
+
+.Buttons{
+    display: flex;
+    margin : 1vh;
+    gap: 5vh;
+}
+
+@media (max-width: 768px) {
+    .tabelaContainer {
+        width: 95%;
+        padding: 3vh 3vw;
+    }
+
+    .title {
+        font-size: 22pt;
+    }
+
+    .tabela th, .tabela td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .tabelaContainer {
+        width: 100%;
+        margin: 3vh auto;
+        padding: 2vh 1vw;
+        box-shadow: none;
+    }
+
+    .title {
+        font-size: 18pt;
+    }
+
+    .tabela {
+        font-size: 12px;
+    }
+
+    .tabela th, .tabela td {
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .tabela th {
+        text-align: center;
+    }
+
+    .tabela {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }

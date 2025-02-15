@@ -1,17 +1,22 @@
 'use client'
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import styles from "./page.module.css";
+import ButtonBusca from '../buttonBusca/page';
+import ModalBusca from '../modalBusca/page';
 
 export default function ExibirLista ({url, tipoPagina}){
   const [medicos, setMedicos] = useState([]);
+  const [pacientes, setPacientes] = useState([])
   const [loading, setLoading] = useState(true);
   const [busca, setBusca] = useState("")
+  const [secondModalAberta, setSecondModalAberta] = useState(false)
+  const [modalAberta, setModalAberta] = useState(false);
+
   var medicoBusca = null
   console.log(tipoPagina)
 
-  if (tipoPagina === 'Medico' || tipoPagina === 'Paciente') {
+  if (tipoPagina === 'Médicos' || tipoPagina === 'Pacientes') {
     medicoBusca = medicos.filter(medico => medico.nome.toLocaleLowerCase().startsWith(busca.toLocaleLowerCase()))
-
   }
   else{
     medicoBusca = medicos.filter(consulta => consulta.medico.toLocaleLowerCase().startsWith(busca.toLocaleLowerCase()))
@@ -19,9 +24,7 @@ export default function ExibirLista ({url, tipoPagina}){
   const [error, setError] = useState(null); 
   
 
-  useEffect(() => {
-    setMedicos([])
-
+  useEffect(() => {  
     const fetchMedicos = async () => {
       try { 
         const res = await fetch(url);
@@ -54,28 +57,34 @@ export default function ExibirLista ({url, tipoPagina}){
 
   return (
     <div className={styles.tabelaContainer}>
-      <h1 className={styles.title}>Lista de Médicos</h1>
-      <input 
-          value={busca}
-          type="text" 
-          onChange={(ev) => (setBusca(ev.target.value))}/>
-      <ul>
-          {medicoBusca.map((medico) =>(
-              <li key={medico.id}>{medico.nome}</li>
-          ))}   
-      </ul>
+      <h1 className={styles.title}>Lista de {tipoPagina}</h1>
+      
+      {tipoPagina === 'Consultas' ? 
+        <div className={styles.Buttons}>
+          <ButtonBusca tipoBusca={tipoPagina} onClick={() => setModalAberta(!modalAberta)}>Buscar Médicos</ButtonBusca>
+          <ButtonBusca tipoBusca={tipoPagina} onClick={() => setSecondModalAberta(!secondModalAberta)}>Buscar Pacientes</ButtonBusca>
+
+          <ModalBusca lista={medicos} isOpen={secondModalAberta} onClose={() => setSecondModalAberta(false)} tipoBusca={1}>Buscar {tipoPagina}</ModalBusca>
+          <ModalBusca lista={medicos} isOpen={modalAberta} onClose={() => setModalAberta(false)} tipoBusca={2}>Buscar {tipoPagina}</ModalBusca>
+        </div>
+        :
+        <div className={styles.Buttons}>
+          <ButtonBusca tipoBusca={tipoPagina} onClick={() => setModalAberta(!modalAberta)}>Buscar {tipoPagina}</ButtonBusca>
+          <ModalBusca lista={medicos} isOpen={modalAberta} onClose={() => setModalAberta(false)} tipoBusca={0}>Buscar {tipoPagina}</ModalBusca>
+        </div>}
       <table className={styles.tabela}>
         <thead>
           <tr>
             <th>ID</th>
-            {tipoPagina == 'Medico' || tipoPagina == 'Paciente' ? <th>Nome</th>: null}
-            {tipoPagina == 'Medico' || tipoPagina == 'Paciente' ? <th>Telefone</th>: null} 
-            {tipoPagina == 'Medico' || tipoPagina == 'Paciente' ? <th>Email</th> : null}
-            {tipoPagina == 'Consulta'  ? <th>Medico</th> : null}
-            {tipoPagina == 'Medico' || tipoPagina == 'Consulta' ? <th>Especialidade</th>: null}
-            {tipoPagina == 'Paciente' ? <th>CPF</th> : null}
-            {tipoPagina == 'Consulta' ? <th>Paciente</th> : null}
-            {tipoPagina == 'Consulta' ? <th>Tipo</th> : null}
+            {tipoPagina == 'Médicos' || tipoPagina == 'Pacientes' ? <th>Nome</th>: null}
+            {tipoPagina == 'Médicos' || tipoPagina == 'Pacientes' ? <th>Telefone</th>: null} 
+            {tipoPagina == 'Médicos' || tipoPagina == 'Pacientes' ? <th>Email</th> : null}
+
+            {tipoPagina == 'Pacientes' ? <th>CPF</th> : null}
+            {tipoPagina == 'Médicos' || tipoPagina == 'Consultas' ? <th>Especialidade</th>: null}
+            {tipoPagina == 'Consultas'  ? <th>Medico</th> : null}
+            {tipoPagina == 'Consultas' ? <th>Paciente</th> : null}
+            {tipoPagina == 'Consultas' ? <th>Tipo</th> : null}
           </tr>
         </thead>
       
@@ -83,14 +92,14 @@ export default function ExibirLista ({url, tipoPagina}){
           {medicos.map((medico, index) => (
             <tr key={medico.id} className={index % 2 === 0 ? styles.linhaClara : ""}>
               <td>{medico.id}</td>
-              <td>{medico.nome}</td>
-              <td>{medico.telefone}</td>
-              {tipoPagina == 'Paciente' || tipoPagina == 'Medico' ? <td>{medico.email}</td> : null}
-              {tipoPagina == 'Paciente' ? <td>{medico.cpf}</td> : null}
-              {tipoPagina == 'Medico' || tipoPagina == 'Consulta' ? <td>{medico.especialidade}</td> : null}
-              {tipoPagina == 'Consulta' ? <td>{medico.medico}</td> : null}
-              {tipoPagina == 'Consulta' ? <td>{medico.paciente}</td> : null}
-              {tipoPagina == 'Consulta' ? <td>{medico.tipo}</td> : null}
+              {tipoPagina == 'Médicos' || tipoPagina == 'Pacientes' ? <td>{medico.nome}</td> : null}
+              {tipoPagina == 'Médicos' || tipoPagina == 'Pacientes' ? <td>{medico.telefone}</td> : null}
+              {tipoPagina == 'Pacientes' || tipoPagina == 'Médicos' ? <td>{medico.email}</td> : null}
+              {tipoPagina == 'Pacientes' ? <td>{medico.cpf}</td> : null}
+              {tipoPagina == 'Médicos' || tipoPagina == 'Consultas' ? <td>{medico.especialidade}</td> : null}
+              {tipoPagina == 'Consultas' ? <td>{medico.medico}</td> : null}
+              {tipoPagina == 'Consultas' ? <td>{medico.paciente}</td> : null}
+              {tipoPagina == 'Consultas' ? <td>{medico.tipo}</td> : null}
             </tr>))}
         </tbody>
       </table> 

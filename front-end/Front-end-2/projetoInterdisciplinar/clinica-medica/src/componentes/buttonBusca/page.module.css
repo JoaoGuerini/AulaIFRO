@@ -1,0 +1,22 @@
+.botaoBuscar {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #3aceb5;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;  
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botaoBuscar:hover {
+    background-color: #2aa494;
+    transform: scale(1.05); 
+}
+
+.botaoBuscar:active {
+    background-color: #1c7d6d;
+    transform: scale(0.98);
+}
