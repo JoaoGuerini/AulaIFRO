@@ -3,6 +3,7 @@ import cors from 'cors'
 import { retornaCampeonatos, retornaCampeonatosAno, retornaCampeonatosID, retornaCampeonatosTime } from './servico/retornaCampeonatos_servico.js'
 import { AtualizaCampeonato, AtualizaCampeonatoParcial } from './servico/atualizaCampeonato_servico.js'
 import e from 'express'
+import { DeletaCampeonatos } from './servico/deletaCampeonatos_servico.js'
 
 const app = express()
 app.use(cors())
@@ -17,6 +18,17 @@ app.use(express.json())
 
 //     conexao.release()
 // })
+
+app.delete('/campeonatos/:id', async(req, res) => {
+    const{id} = req.params
+    const resp = await DeletaCampeonatos(id)
+    if(resp.affectedRows > 0){
+        res.status(202).send("Registro deletado com sucesso.")
+    }
+    else{
+        res.status(404).send("Não existe um registro para o id informado.")
+    }
+})
 
 app.put('/campeonatos/:id', async(req, res) => {
     const{id} = req.params;
@@ -64,6 +76,7 @@ app.get('/campeonatos', async(req, res) => {
  
     const ano = req.query.ano
     const time = req.query.time
+    let campeonatos;
 
     if(typeof ano === 'undefined' && typeof time === 'undefined'){
         campeonatos = await retornaCampeonatos()
