@@ -57,48 +57,102 @@
     display: block;
 }
 
-@media (min-width: 400px) and (max-width: 780px){
+@media (max-width: 1000px) {
     .Header {
-        flex-direction: row;
-        align-items: flex-start;
-        min-height: 8vh;
-    }
-
-    .divImg {
-        display: none; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .HeaderNav {
-        width: 70%;
-        justify-content: flex-start;
+        width: 100%;
+        margin: 0vh;
+        display: flex;
+        justify-content: center;
     }
 
     .HeaderUl {
-        display: flex;
-        flex-direction: row;
-        gap: 5vh;
-        width: 70%; 
-        
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+        align-items: center;
+        text-align: center;
     }
 
     .HeaderLi {
-        font-size: 12pt;
-        width: 50%; 
+        font-size: 14pt;
+        width: 100%;
+        text-align: center;
     }
 
     .dropdownUL {
-        position: static; 
+        position: relative;
+        width: auto;
+        text-align: center;
         box-shadow: none;
+    }
+
+    .dropdownUL {
         display: none;
-        width: 70%;
+        position: absolute;
+        left: 100%; 
+        top: 100%;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        z-index: 10;
+    }
+
+    .HeaderLi {
+        position: relative;
     }
 
     .HeaderLi:hover .dropdownUL {
         display: block;
     }
 
+    .divImg {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0vh;
+        padding: 0vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .divImg {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0vh;
+        padding: 0vh;
+    }
+
+    .HeaderNav {
+        margin: 0vh;
+    }
+
+    .divImg img {
+        max-width: 60px;
+        height: auto;
+    }
+
+    .HeaderUl {
+        gap: 10px;
+    }
+
+    .HeaderLi {
+        font-size: 12pt;
+    }
+
+    .dropdownUL {
+        width: auto;
+    }
+
     .dropdownLI {
-        font-size: 9pt;
-        width: 10%; 
+        font-size: 11pt;
+        padding: 10px;
     }
 }
